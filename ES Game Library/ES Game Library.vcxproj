@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{729C9AF2-7AD1-4F8C-BF76-4147E745021B}</ProjectGuid>
+    <RootNamespace>ESGameLibrary</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\MeshContentTask.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ShaderGraphContentTask.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)SDK\DirectX\Include;$(SolutionDir)SDK\DirectX\dmusic\Include;$(SolutionDir)SDK\DirectX\dshow\Include;$(SolutionDir)SDK\DirectX\DirectXTK\Inc;$(SolutionDir)SDK\Physics\Box2D\include;$(SolutionDir)SDK\Physics\Bullet\include;$(SolutionDir)SDK\SpriteStudio\Include;$(SolutionDir)SDK\Effekseer\include;$(SolutionDir)SDK\Live2D\include;$(SolutionDir)SDK\Squirrel\include;$(SolutionDir)SDK\Kinect\inc;$(SolutionDir)SDK\OpenGL\Include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)SDK\DirectX\dmusic\Lib\x86;$(SolutionDir)SDK\DirectX\Lib\x86;$(SolutionDir)SDK\DirectX\dshow\Lib\x86;$(SolutionDir)SDK\DirectX\DirectXTK\Lib\x86;$(SolutionDir)SDK\Physics\Box2D\lib\x86;$(SolutionDir)SDK\Physics\Bullet\lib\x86;$(SolutionDir)SDK\SpriteStudio\Lib\x86;$(SolutionDir)SDK\Effekseer\lib;$(SolutionDir)SDK\Live2D\lib;$(SolutionDir)SDK\Squirrel\lib;$(SolutionDir)SDK\Kinect\lib;$(SolutionDir)SDK\OpenGL\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)SDK\DirectX\Include;$(SolutionDir)SDK\DirectX\dmusic\Include;$(SolutionDir)SDK\DirectX\dshow\Include;$(SolutionDir)SDK\DirectX\DirectXTK\Inc;$(SolutionDir)SDK\Physics\Box2D\include;$(SolutionDir)SDK\Physics\Bullet\include;$(SolutionDir)SDK\SpriteStudio\Include;$(SolutionDir)SDK\Effekseer\include;$(SolutionDir)SDK\Live2D\include;$(SolutionDir)SDK\Squirrel\include;$(SolutionDir)SDK\Kinect\inc;$(SolutionDir)SDK\OpenGL\Include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)SDK\DirectX\dmusic\Lib\x86;$(SolutionDir)SDK\DirectX\Lib\x86;$(SolutionDir)SDK\DirectX\dshow\Lib\x86;$(SolutionDir)SDK\DirectX\DirectXTK\Lib\x86;$(SolutionDir)SDK\Box2D\lib\x86;$(SolutionDir)SDK\Bullet\lib\x86;$(SolutionDir)SDK\SpriteStudio\Lib\x86;$(SolutionDir)SDK\Effekseer\lib;$(SolutionDir)SDK\Live2D\lib;$(SolutionDir)SDK\Squirrel\lib;$(SolutionDir)SDK\Kinect\lib;$(SolutionDir)SDK\OpenGL\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_WINNT=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <AdditionalOptions>/std:c++17 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreSpecificDefaultLibraries>LIBCMTD;LIBCMT;LIBCPMT</IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>for %%1 in ("$(ProjectDir)Shader\\*.fx") do "$(ProjectDir)Shader\\Compiler\\fxc.exe" /LD /T fx_2_0 /Fo "$(ProjectDir)\\Content\\FX\\%%~n1.fxc" "$(ProjectDir)Shader\\%%~n1.fx"</Command>
+    </PostBuildEvent>
+    <MeshContentTask>
+      <ContentOutput>$(OutDir)..\ES Game Library\Content\%(Filename).cmo</ContentOutput>
+    </MeshContentTask>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_WIN32_WINNT=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <AdditionalOptions>/std:c++17 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AccelaretorBase.cpp" />
+    <ClCompile Include="CMapMove.cpp" />
+    <ClCompile Include="C_Tonnel.cpp" />
+    <ClCompile Include="EnumManager.cpp" />
+    <ClCompile Include="Extension\Direct2D\Direct2D.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Extension\DirectX11\DXGraphics11.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Extension\DirectX11\Model11.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Extension\Effekseer\Effekseer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Extension\Effekseer\EffekseerEffect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Extension\Kinect\Kinect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Extension\Kinect\NUI.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Extension\Live2D\Live2D.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Extension\OpenGL\OpenGL.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Extension\Squirrel\Script.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Extension\Squirrel\Squirrel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GameMain.cpp" />
+    <ClCompile Include="GameScene\SceneShared.cpp" />
+    <ClCompile Include="GameScene\TemplateScene.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../StdAfx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../StdAfx.h</PrecompiledHeaderFile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="MyClass\ALL_SCENE\GAME_CLEAR\GAEM_CLEAR.cpp" />
+    <ClCompile Include="MyClass\ALL_SCENE\GAME_OVER\C_GAME_OVER.cpp" />
+    <ClCompile Include="MyClass\ALL_SCENE\MAIN\C_MAIN.cpp" />
+    <ClCompile Include="MyClass\ALL_SCENE\Result\Result.cpp" />
+    <ClCompile Include="MyClass\ALL_SCENE\SCENEMANAGER\SceneManager.cpp" />
+    <ClCompile Include="MyClass\ALL_SCENE\TITLE\C_TITLE.cpp" />
+    <ClCompile Include="MyClass\CBROCKOBSTACLE\CBrockObstacle.cpp" />
+    <ClCompile Include="MyClass\CCHARACTER\Character.cpp" />
+    <ClCompile Include="MyClass\CGATEOBSTACLE\CGateObstacle.cpp" />
+    <ClCompile Include="MyClass\CMODELDATA\ModelData.cpp" />
+    <ClCompile Include="MyClass\CPLAYERDATA\CPlayerData.cpp" />
+    <ClCompile Include="MyClass\CSHAREDMETHOD\CSharedMethod.cpp" />
+    <ClCompile Include="MyClass\C_CAMERA\C_CAMERA.cpp" />
+    <ClCompile Include="MyClass\C_DIS\C_DIS.cpp" />
+    <ClCompile Include="MyClass\C_EFFEKSEER\EffekseerMng.cpp" />
+    <ClCompile Include="MyClass\C_GATEOBSTATCLE\R_GATEOBSTATCLE.cpp" />
+    <ClCompile Include="MyClass\C_HITBOX\HitBox.cpp" />
+    <ClCompile Include="MyClass\C_INPUT\Input.cpp" />
+    <ClCompile Include="MyClass\C_ITEMOBSTACLE\CItemOBstacle.cpp" />
+    <ClCompile Include="MyClass\C_MAP\C_MAP.cpp" />
+    <ClCompile Include="MyClass\C_OBJECT\Object.cpp" />
+    <ClCompile Include="MyClass\C_OBSTACLEL\CObstacleL.cpp" />
+    <ClCompile Include="MyClass\C_OBSTACLER\CObstacleR.cpp" />
+    <ClCompile Include="MyClass\C_OBSTACLE\C_Obstacle.cpp" />
+    <ClCompile Include="MyClass\C_PLAYER\C_PLAYER.cpp" />
+    <ClCompile Include="MyClass\C_SE\C_SE.cpp" />
+    <ClCompile Include="MyClass\C_SHADER\C_SHADER.cpp" />
+    <ClCompile Include="MyClass\C_SPRITE\C_Sprite.cpp" />
+    <ClCompile Include="MyClass\C_UI\CUI.cpp" />
+    <ClCompile Include="MyClass\HitStop\HitStop.cpp" />
+    <ClCompile Include="MyClass\MapPlacementData\MapPlacementData.cpp" />
+    <ClCompile Include="MyClass\ObjectPlacement\ObjectPlacement.cpp" />
+    <ClCompile Include="MyClass\OBSEVER\OBSEVER.cpp" />
+    <ClCompile Include="MyClass\OBSTACLEBASE\ObstacleBase.cpp" />
+    <ClCompile Include="MyClass\ObstacleFactory\ObstacleFactory.cpp" />
+    <ClCompile Include="MyClass\ObstacleManager\ObstacleManager.cpp" />
+    <ClCompile Include="MyClass\ResouceManager\ResouceManager.cpp" />
+    <ClCompile Include="MyClass\UIDATABASE\UiDataBase.cpp" />
+    <ClCompile Include="RotationMove.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Velocity.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="DirectX\Audio\DXAudio8.cpp" />
+    <ClCompile Include="DirectX\Audio\MusicSegment.cpp" />
+    <ClCompile Include="DirectX\Audio\Sound3DBuffer.cpp" />
+    <ClCompile Include="DirectX\Audio\SoundBuffer.cpp" />
+    <ClCompile Include="DirectX\Audio\SoundListener.cpp" />
+    <ClCompile Include="DirectX\Common\ComLibrary.cpp" />
+    <ClCompile Include="DirectX\Graphics\AnimationModel.cpp" />
+    <ClCompile Include="DirectX\Graphics\Camera.cpp" />
+    <ClCompile Include="DirectX\Graphics\DXGFont.cpp" />
+    <ClCompile Include="DirectX\Graphics\DXGraphics9.cpp" />
+    <ClCompile Include="DirectX\Graphics\Effect.cpp" />
+    <ClCompile Include="DirectX\Graphics\Model.cpp" />
+    <ClCompile Include="DirectX\Graphics\RenderTarget.cpp" />
+    <ClCompile Include="DirectX\Graphics\Sprite.cpp" />
+    <ClCompile Include="DirectX\Graphics\Sprite3D.cpp" />
+    <ClCompile Include="DirectX\Graphics\SpriteBatch.cpp" />
+    <ClCompile Include="DirectX\Graphics\StateBlock.cpp" />
+    <ClCompile Include="DirectX\Graphics\VertexBuffer.cpp" />
+    <ClCompile Include="DirectX\Input\DInput8.cpp" />
+    <ClCompile Include="DirectX\Input\InputDevice.cpp" />
+    <ClCompile Include="DirectX\Input\InputEffect.cpp" />
+    <ClCompile Include="DirectX\Show\DShow.cpp" />
+    <ClCompile Include="DirectX\Show\Media.cpp" />
+    <ClCompile Include="Framework\FixTimer.cpp" />
+    <ClCompile Include="Framework\GameApp.cpp" />
+    <ClCompile Include="Framework\GameFrameWindow.cpp" />
+    <ClCompile Include="Framework\GameProc.cpp" />
+    <ClCompile Include="Framework\Network.cpp" />
+    <ClCompile Include="Framework\Random.cpp" />
+    <ClCompile Include="Framework\SingleApp.cpp" />
+    <ClCompile Include="Framework\Stream.cpp" />
+    <ClCompile Include="Framework\Thread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AccelaretorBase.h" />
+    <ClInclude Include="CMapMove.h" />
+    <ClInclude Include="C_Tonnel.h" />
+    <ClInclude Include="EnumManager.h" />
+    <ClInclude Include="Extension\Direct2D\Direct2D.hpp" />
+    <ClInclude Include="Extension\DirectX11\DXGraphics11.hpp" />
+    <ClInclude Include="Extension\DirectX11\Model11.hpp" />
+    <ClInclude Include="Extension\Effekseer\Effekseer.hpp" />
+    <ClInclude Include="Extension\Effekseer\EffekseerEffect.hpp" />
+    <ClInclude Include="Extension\Kinect\Kinect.hpp" />
+    <ClInclude Include="Extension\Kinect\NUI.hpp" />
+    <ClInclude Include="Extension\Live2D\Live2D.hpp" />
+    <ClInclude Include="Extension\OpenGL\OpenGL.hpp" />
+    <ClInclude Include="Extension\Squirrel\Script.hpp" />
+    <ClInclude Include="Extension\Squirrel\Squirrel.hpp" />
+    <ClInclude Include="GameMain.h" />
+    <ClInclude Include="GameScene\SceneShared.hpp" />
+    <ClInclude Include="GameScene\TemplateScene.hpp" />
+    <ClInclude Include="MyClass\ALL_SCENE\GAME_CLEAR\GAEM_CLEAR.h" />
+    <ClInclude Include="MyClass\ALL_SCENE\GAME_OVER\C_GAME_OVER.h" />
+    <ClInclude Include="MyClass\ALL_SCENE\MAIN\C_MAIN.h" />
+    <ClInclude Include="MyClass\ALL_SCENE\Result\Result.h" />
+    <ClInclude Include="MyClass\ALL_SCENE\SCENEMANAGER\BaseScreen.h" />
+    <ClInclude Include="MyClass\ALL_SCENE\SCENEMANAGER\SceneManager.h" />
+    <ClInclude Include="MyClass\ALL_SCENE\TITLE\C_TITLE.h" />
+    <ClInclude Include="MyClass\CBROCKOBSTACLE\CBrockObstacle.h" />
+    <ClInclude Include="MyClass\CCHARACTER\Character.h" />
+    <ClInclude Include="MyClass\CGATEOBSTACLE\CGateObstacle.h" />
+    <ClInclude Include="MyClass\CMODELDATA\ModelData.h" />
+    <ClInclude Include="MyClass\CPLAYERDATA\CPlayerData.h" />
+    <ClInclude Include="MyClass\CSHAREDMETHOD\CSharedMethod.h" />
+    <ClInclude Include="MyClass\C_CAMERA\C_CAMERA.h" />
+    <ClInclude Include="MyClass\C_DIS\C_DIS.h" />
+    <ClInclude Include="MyClass\C_EFFEKSEER\EffekseerMng.h" />
+    <ClInclude Include="MyClass\C_GATEOBSTATCLE\R_GATEOBSTATCLE.h" />
+    <ClInclude Include="MyClass\C_HITBOX\HitBox.h" />
+    <ClInclude Include="MyClass\C_INPUT\Input.h" />
+    <ClInclude Include="MyClass\C_ITEMOBSTACLE\CItemOBstacle.h" />
+    <ClInclude Include="MyClass\C_MAP\C_MAP.h" />
+    <ClInclude Include="MyClass\C_OBJECT\Object.h" />
+    <ClInclude Include="MyClass\C_OBSTACLEL\CObstacleL.h" />
+    <ClInclude Include="MyClass\C_OBSTACLER\CObstacleR.h" />
+    <ClInclude Include="MyClass\C_OBSTACLE\C_Obstacle.h" />
+    <ClInclude Include="MyClass\C_PLAYER\C_PLAYER.h" />
+    <ClInclude Include="MyClass\C_SE\C_SE.h" />
+    <ClInclude Include="MyClass\C_SHADER\C_SHADER.h" />
+    <ClInclude Include="MyClass\C_SPRITE\C_Sprite.h" />
+    <ClInclude Include="MyClass\C_STATE\C_STATE.h" />
+    <ClInclude Include="MyClass\C_UI\CUI.h" />
+    <ClInclude Include="MyClass\HitStop\HitStop.h" />
+    <ClInclude Include="MyClass\MapPlacementData\MapPlacementData.h" />
+    <ClInclude Include="MyClass\ObjectPlacement\ObjectPlacement.h" />
+    <ClInclude Include="MyClass\OBSEVER\OBSEVER.h" />
+    <ClInclude Include="MyClass\OBSTACLEBASE\ObstacleBase.h" />
+    <ClInclude Include="MyClass\ObstacleFactory\ObstacleFactory.h" />
+    <ClInclude Include="MyClass\ObstacleManager\ObstacleManager.h" />
+    <ClInclude Include="MyClass\ResouceManager\ResouceManager.h" />
+    <ClInclude Include="MyClass\UIDATABASE\UiDataBase.h" />
+    <ClInclude Include="RotationMove.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="ESGLib.h" />
+    <ClInclude Include="DirectX\Audio\DXAudio8.hpp" />
+    <ClInclude Include="DirectX\Audio\MusicSegment.hpp" />
+    <ClInclude Include="DirectX\Audio\Sound3DBuffer.hpp" />
+    <ClInclude Include="DirectX\Audio\SoundBuffer.hpp" />
+    <ClInclude Include="DirectX\Audio\SoundListener.hpp" />
+    <ClInclude Include="DirectX\Common\ComLibrary.hpp" />
+    <ClInclude Include="DirectX\Graphics\AnimationModel.hpp" />
+    <ClInclude Include="DirectX\Graphics\Camera.hpp" />
+    <ClInclude Include="DirectX\Graphics\DXGFont.hpp" />
+    <ClInclude Include="DirectX\Graphics\DXGraphics9.hpp" />
+    <ClInclude Include="DirectX\Graphics\DXGTypes.h" />
+    <ClInclude Include="DirectX\Graphics\Effect.hpp" />
+    <ClInclude Include="DirectX\Graphics\Model.hpp" />
+    <ClInclude Include="DirectX\Graphics\RenderTarget.hpp" />
+    <ClInclude Include="DirectX\Graphics\Sprite.hpp" />
+    <ClInclude Include="DirectX\Graphics\Sprite3D.hpp" />
+    <ClInclude Include="DirectX\Graphics\SpriteBatch.hpp" />
+    <ClInclude Include="DirectX\Graphics\StateBlock.hpp" />
+    <ClInclude Include="DirectX\Graphics\VertexBuffer.hpp" />
+    <ClInclude Include="DirectX\Input\DInput8.hpp" />
+    <ClInclude Include="DirectX\Input\InputDevice.hpp" />
+    <ClInclude Include="DirectX\Input\InputEffect.hpp" />
+    <ClInclude Include="DirectX\Show\DShow.hpp" />
+    <ClInclude Include="DirectX\Show\Media.hpp" />
+    <ClInclude Include="GameScene\GameScene.hpp" />
+    <ClInclude Include="Framework\FixTimer.hpp" />
+    <ClInclude Include="Framework\GameApp.hpp" />
+    <ClInclude Include="Framework\GameFrameWindow.hpp" />
+    <ClInclude Include="Framework\GameProc.hpp" />
+    <ClInclude Include="Framework\GameWindow.hpp" />
+    <ClInclude Include="Framework\Network.hpp" />
+    <ClInclude Include="Framework\Random.hpp" />
+    <ClInclude Include="Framework\SingleApp.hpp" />
+    <ClInclude Include="Framework\Stream.hpp" />
+    <ClInclude Include="Framework\Thread.hpp" />
+    <ClInclude Include="..\Resource\resource.h" />
+    <ClInclude Include="Velocity.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resource\DirectX.ico" />
+    <None Include="Content\オブジェクト配置.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\Resource\Resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\MeshContentTask.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ShaderGraphContentTask.targets" />
+  </ImportGroup>
+</Project>
